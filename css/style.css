@@ -1,0 +1,97 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+
+#index-banner{
+
+	background : linear-gradient(
+     rgba(211, 211, 211, 0.65),rgba(211, 211, 211, 0.65)
+
+    ),
+    /* bottom, image */
+    url(../images/bg.jpg) ;
+    background-size: 80%;
+
+    background-position: center;
+	height : 700px;
+}
+
+.tabhost{
+	background: #ffff00;
+	height : 550px;
+
+}
+#tabhostref{
+	background: #ffff00;
+	
+
+}
+#frontpagearrow{font-size:60px;
+}
+
+.intab {
+	background : #d3d3d3;
+	height : 550px;
+}
+
+.foodimg {
+	height : 200px;
+	width : 200px;
+	margin-left: 20px;
+	border-radius: 100px;
+	position: relative;
+	-webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+     transition: opacity 0.5s ease-in-out;
+     cursor: pointer;
+}
+.foodimg:hover {
+	cursor : pointer;
+}
+
+.active1	{
+	opacity : 1;
+	background: #ffff00;
+}
+.selected{
+	opacity:0.2;
+}
+.handico{
+	cursor : pointer;
+}
+.tabcontent {
+	margin-top: 20px;
+}
+.th2 {
+	height:70px;
+	width : 70px;
+}
+.th3 {
+	width : 90px;
+	height : 90px;
+	margin-left: 9%;
+}
+.community{
+	opacity:1;
+}
+.gmap_canvas{
+	opacity : 0;
+}
+
+.tabhost2{
+	opacity : 1;
+	-webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+     transition: opacity 0.5s ease-in-out;
+    
+}

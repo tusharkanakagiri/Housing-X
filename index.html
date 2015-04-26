@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Housing X</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>-->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+        <script src="js/script.js"></script>
+        <script src="js/markercluster.js"></script>
+          <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/set1.css" />
+
+    </head>
+    <body >
+         
+
+  <nav class="light-blue lighten-1" role="navigation" style="position: fixed; z-index:1000000;">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Housing X</a>
+      <!--<ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Navbar Link 2</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Navbar Link 2</a></li>
+      </ul>-->
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+  
+  <div class="section no-pad-bot" id="index-banner" >
+  
+  <div class="row" style="margin-top: 8%;">
+        <center>
+        <div class="col m12" style="padding-left: 18%; padding-right:18%;">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <h1 class="header center orange-text">Housing X</h1>
+              <h5 class="header col s12 orange-text">Re - thought. Re - imagined. Re - engineered.</h5><br><br>
+            </div>
+            <div class="card-action">
+              <div class="row center">
+              <a href="#tabhostref" id="download-button" class="btn-large waves-effect waves-light purple"><i class="mdi-hardware-keyboard-arrow-down" id="frontpagearrow"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </center>
+      </div>
+  
+  </div>
+  
+  <div id="tabhostref" class="section scrollspy">
+<div class="tabhost" id="tabhost" class="section scrollspy">
+<div class="container"  >
+  
+ <div class="row intab">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#test1">Food</a></li>
+        <li class="tab col s3"><a class="active" href="#test2">Community</a></li>
+        <li class="tab col s3"><a href="#test3">Cultural</a></li>
+        
+      </ul>
+    </div>
+    <div id="test1" class="col s12 tabcontent"><img  src="images/ni.jpg" onclick="lolmax(1);" class="foodimg"><img  src="images/Chinese.jpg" onclick="lolmax(2);" class="foodimg"><img  src="images/continental.jpg" onclick="lolmax(3);" class="foodimg"><img  src="images/southindian.jpg" onclick="lolmax(4);" class="foodimg"><br><br><img  src="images/Italian.jpg" onclick="lolmax(5);" class="foodimg"><img  src="images/Thai.jpg" onclick="lolmax(6);" class="foodimg"><img  src="images/lounges.jpg" onclick="lolmax(7);" class="foodimg"><img  src="images/cafe.jpg" onclick="lolmax(8);" class="foodimg"><div style="margin-left: 25%; width : 100%;">
+
+
+</div></div>
+   
+    <div id="test2" class="col s12"><div class="grid"><div class="handico"><i class="mdi-action-add-shopping-cart tabhost2" onclick="lolmax(9);" style="font-size : 80px;" ></i><i class="mdi-maps-local-mall tabhost2" onclick="lolmax(10);" style="font-size : 80px; padding-left : 9%;" ></i><i class="tabhost2 mdi-maps-local-hospital" onclick="lolmax(11);" style="font-size : 80px; padding-left : 9%;" ></i><i class="tabhost2 mdi-social-school" onclick="lolmax(12);"style="font-size : 80px; padding-left : 9%;" ></i><i class="tabhost2 mdi-maps-hotel" onclick="lolmax(13);" style="font-size : 80px; padding-left : 9%;" ></i><i class="tabhost2 mdi-maps-local-atm" onclick="lolmax(14);" style="font-size : 80px; padding-left : 9%;" ></i><br><br><img src="images/police.png" onclick = "lolmax(15)" class="tabhost2 th2"><img src="images/swimming.png" onclick = "lolmax(16)" class="tabhost2 th3" ><img src="images/bank.png" onclick = "lolmax(17)" class="th3 tabhost2">
+  
+  
+</div>
+
+</div>
+    
+    
+
+    </div>
+    <div id="test3" class="col s12"><center><img src="images/worship.png" class="foodimg" style="margin-top: 10%; " onClick="lolmax(18);"></center></div>
+    
+  </div>
+  <center>
+
+</center>
+
+</div>
+
+</div>
+</div>
+        
+ 
+  
+   
+  
+      <!--   Icon Section   -->
+  
+
+    </div>
+    <br><br>
+     <div class="row">
+    <form class="col s12">
+      <div class="row">
+         <div class="input-field col s6">
+          <input id="gmap_where" type="text" name="gmap_where">
+          <label for="gmap_where">Enter City</label>
+          <button id="button2" class="btn waves-effect waves-light" type="submit" name="action" onclick="findAddress(); return false;">Set City
+    <i class="mdi-content-send right"></i>
+  </button>
+        </div>
+        <div class="input-field col s6" style="z-index:10000;">
+    <select id="gmap_radius">
+      <option value="" disabled selected>Enter desired radius : </option>
+      <option value="500">500 m</option>
+      <option value="1000">1000 m</option>
+      <option value="1500">1500 m</option>
+      <option value="5000">5000 m</option>
+
+    </select>
+    <label for="gmap_radius">Radius:</label>
+  </div>
+   
+
+      </div><center>
+      <a href="#gmap_canvas" id="finbtn" class="waves-effect waves-light btn-large" onclick="findPlaces(); return false;"><i class="mdi-hardware-keyboard-arrow-down" style="font-size:60px;"></i></a></center>
+     
+      
+     
+    </form>
+
+  </div>
+
+
+
+           
+           <div class="container">
+             <div class="section">
+           <div id="container" class="container">
+            <div class="">
+                
+                
+                <div class="button" style="visibility: hidden;">
+                    <label for="gmap_keyword">Keyword :</label>
+                    <input id="gmap_keyword" type="text" name="gmap_keyword" /></div>
+                <div class="button" style="visibility: hidden;">
+                    <label for="gmap_type">Type:</label>
+                    <select id="gmap_type">
+
+                        <option value="art_gallery">art_gallery</option>
+                        <option value="atm">atm</option>
+                        <option value="bank">bank</option>
+                        <option value="bar">bar</option>
+                        <option value="cafe">cafe</option>
+                        <option value="food">food</option>
+                        <option value="hospital">hospital</option>
+                        <option value="police">police</option>
+                        <option value="store">store</option>
+                    </select>
+                </div>
+                <div class="button" style="visibility: hidden;">
+                    <label for="gmap_type1">Type:</label>
+                    <select id="gmap_type1">
+                    <option value =""></option>
+                        
+                        <option value="supermarket">supermarket</option>
+                        <option value="mall">mall</option>
+                        <option value="school">school</option>
+                        <option value="hotel">hotel</option>
+                        <option value="swimming">swimming</option>
+                        <option value="worship">worship</option>
+                        <option value="bank">bank</option>
+                        <option value="bar">bar</option>
+                        <option value="cafe">cafe</option>
+                        <option value="food">food</option>
+                        <option value="hospital">hospital</option>
+                        <option value="police">police</option>
+                        <option value="store">store</option>
+                    </select>
+                </div>
+                <div class="button" style="visibility: hidden;">
+                    <label for="gmap_type2">Type:</label>
+                    <select id="gmap_type2">
+                    <option value =""></option>
+                        <option value="supermarket">supermarket</option>
+                        <option value="mall">mall</option>
+                        <option value="school">school</option>
+                        <option value="hotel">hotel</option>
+                        <option value="swimming">swimming</option>
+                        <option value="worship">worship</option>
+                        <option value="bank">bank</option>
+                        <option value="bar">bar</option>
+                        <option value="cafe">cafe</option>
+                        <option value="food">food</option>
+                        <option value="hospital">hospital</option>
+                        <option value="police">police</option>
+                        <option value="store">store</option>
+                    </select>
+                </div>
+                
+                <input type="hidden" id="lat" name="lat" value="40.7143528" />
+                <input type="hidden" id="lng" name="lng" value="-74.0059731" />
+                <!--<div id="button1" class="button" onclick="findPlaces(); return false;">HHAHHAHAHHAHAH</div> -->
+            </div>
+
+        </div></div></div>
+        <div id="gmap_canvas" style="margin-top: 50px; width:100%; height:700px; opacity:0;" class="section scrollspy gmap" ></div>
+
+ <div class="row" style="margin-top: 8%;">
+        <center>
+        <div class="col m12" style="padding-left: 18%; padding-right:18%;">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              
+              <h5 class="header col s12 " id="suggested"></h5><br><br>
+            </div>
+            <div class="card-action">
+              <div class="row center">
+              <a href="#tabhostref" id="download-button" class="btn-large waves-effect waves-light purple"><i class="mdi-hardware-keyboard-arrow-up" id="frontpagearrow"></i></a>
+              </div>
+
+              <div class="row center">
+              <a href="file:///C:/Users/jayan_000/Desktop/twitter/twitter.txt" class="btn-large waves-effect waves-light purple">Trends in Bangalore</a>
+              <a href="file:///C:/Users/jayan_000/Desktop/Housing/trafficpredict.htm" class="btn-large waves-effect waves-light purple">Traffic Predict</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </center>
+      </div>
+
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  
+  <script>
+   $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+
+   $(function() {
+    $(".foodimg").click(function(){
+      if(($(this).css("opacity"))==1) {
+        $(this).css("opacity" , 0.5);
+       }
+      else {
+
+        $(this).css("opacity" , 1);
+      }
+      
+    });
+
+    $(function() {
+    $(".tabhost2").click(function(){
+      if(($(this).css("opacity"))==1) {
+        $(this).css("opacity" , 0.5);
+       }
+      else {
+
+        $(this).css("opacity" , 1);
+      }
+    }) });
+      
+    
+   
+   $(function() {
+    $("#finbtn").click(function(){
+
+        
+        $("#gmap_canvas").css("opacity" , 1);
+      
+      }
+      
+    );
+  });
+
+
+
+
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+    $("*").each(function() {
+    var cur = $(this);
+    if(cur.css("cursor") == "pointer") {
+       cur.css("cursor", "url(marker.png)");
+    }
+});
+});
+
+  
+
+   
+  </script>
+
+    </body>
+</html>
